@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f7fc">
+  <title>Human or Robot? · English Vocabulary</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><span class="brandmark">✦</span><div><strong>Human or Robot?</strong><small>English Vocabulary · Starter</small></div></div>
+    <button id="reset" class="ghost" type="button">↻ Neustart</button>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow" id="eyebrow">VOCABULARY TRAINER</div>
+      <h1 id="heading">Match the words!</h1>
+      <p id="description">Ziehe die englischen Wörter zu den passenden deutschen Übersetzungen. Kontrolliere anschliessend deine Antworten.</p>
+      <div class="progress" id="progress" aria-label="Lernfortschritt"></div>
+    </section>
+    <section id="app" aria-live="polite"></section>
+    <div class="footer"><span>Drag & drop · auch mit Touchscreen</span><span>🇬🇧 English · 🇨🇭 Deutsch</span></div>
+  </main>
+</div>
+<div class="drag-float" id="drag-float" aria-hidden="true"></div>
+</body>
+</html>
