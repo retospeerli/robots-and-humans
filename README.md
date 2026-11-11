@@ -1,20 +1,20 @@
-# Human or Robot? – Vokabel-Lernapp
+# Human or Robot? – Word Lab (Version 2)
 
-Browser-App für Englisch Starter. Keine Installation, kein Login, keine Datenübertragung, kein Backend.
-
-## Ablauf
-
-1. 15 Wörter: Humans only – Nur Menschen
-2. 16 Wörter: Both – Beide
-3. 16 Wörter: Robots only – Nur Roboter
-4. Finale: Alle 47 englischen Wörter den drei Bereichen eines Venn-Diagramms zuordnen
-
-Wörter per Drag & Drop bewegen (Maus oder Touch). Alternativ zuerst eine Wortkarte anklicken, danach den Zielbereich anklicken. Jede Zuordnung lässt sich wieder ändern.
-
-Die Prüfung zeigt **ausschliesslich die Gesamtanzahl falscher oder fehlender Zuordnungen**, nicht deren Position. Eine Runde kann erst nach fehlerfreier Kontrolle abgeschlossen werden. Alle Schritte laufen lokal im Browser.
+Eine einzige, vollständig lauffähige `index.html` ohne notwendige externe Skripte oder Bibliotheken. Die Google-Schriftarten sind optional; bei fehlendem Internet wird die Systemschrift verwendet.
 
 ## GitHub Pages
 
-Die Dateien `index.html`, `style.css` und `app.js` ins Repository legen. In GitHub **Settings → Pages → Deploy from a branch → main / (root)** auswählen. Danach die bereitgestellte GitHub-Pages-Adresse öffnen.
+`index.html` ins Stammverzeichnis des Repositories hochladen und unter **Settings → Pages** veröffentlichen.
 
-Die App nutzt Google Fonts mit systemweiten Ersatzschriften. Auch ohne die Online-Schriften ist sie funktional.
+## Bedienung
+
+- Runde 1–3: jeweils alle Karten (EN und DE) zufällig auf dem Tisch. Alle lassen sich frei verschieben. Berühren sich Karten in unterschiedlicher Sprache, verbinden sie sich, *ohne* auf inhaltliche Richtigkeit zu prüfen. Ein einfacher Klick auf eine verbundene Karte trennt das Paar.
+- Check: zeigt nur die Anzahl Fehler einschliesslich noch nicht zusammengeführter Karten.
+- Bei null Fehlern erscheint Next. Vorher keine Auflösung.
+- Schlussrunde: 47 englische Karten in ein Venn-Diagramm ziehen (Humans, Both, Robots). Check zeigt nur Fehlerzahl.
+
+## LearningView
+
+Die Schnittstelle nach https://learningview.org/embed-api.php ist eingebaut. Die App sendet **erst bei komplett bestandenem Finale** ein xAPI-Ergebnis `result.score.scaled = 1` an das Elternfenster (`https://learningview.org`). LearningView dokumentiert, dass externe interaktive Aufgaben dadurch ihren Ergebnis- bzw. Erledigtstatus übernehmen. Dazu in LearningView als **Interaktiv (extern)** einbinden, nicht bloss als Link. In LearningView eingebundene HTML- oder ZIP-Inhalte können ausserdem die abgeschlossene Lernrunde über `saveAnswerData` speichern; dieser Mechanismus verlangt das LearningView-Elternfenster. Bei gewöhnlichen GitHub-Pages-Aufrufen entfällt die Speicherung.
+
+Zur Absicherung sollte die automatische Erledigt-Markierung einmal mit einem Testschülerkonto in der tatsächlichen LearningView-Einbettung geprüft werden; lokal ist die externe Plattform nicht testbar.
