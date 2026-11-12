@@ -21,3 +21,6 @@ Zur Absicherung sollte die automatische Erledigt-Markierung einmal mit einem Tes
 
 ## Version 2.1 – Venn-Diagramm
 Die englischen Kärtchen können jetzt innerhalb der drei Diagrammflächen **frei** abgelegt und verschoben werden. Kein automatisches Einrasten oder Umordnen. Je nach Mittelpunkt der Karte färben sich Kartenfläche und Kartenrahmen türkis (Menschen), gelb (beide) oder orange (Roboter). Ausserhalb der Kreise bleiben die Karten neutral. Diese Farbe zeigt nur die gewählte Zone an, nicht die Richtigkeit.
+
+## Korrektur eyes / Augen
+Das Wortpaar «eyes – Augen» gehört zu Humans only, nicht zu Both. Somit: Humans 16, Both 15, Robots 16; insgesamt weiterhin 47 Begriffe.
